@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import commerce from "./lib/commerce";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import ProductsList from "./components/ProductsList";
 import NavBar from "./components/NavBar";
 import Bot from "./components/ChatBot/Bot";
+import ProductIndividual from "./components/ProductIndividual";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -28,11 +30,30 @@ function App() {
   };
 
   return (
-    <div className="app">
-      <NavBar />
-      <ProductsList products={products} />
-      <Bot />
-    </div>
+    <Router>
+      <div className="app">
+        <NavBar />
+        <Routes>
+          <Route
+            exact path="/"
+            element={
+              <>
+                <ProductsList products={products} />
+                <Bot />
+              </>
+            }
+          />
+          <Route
+            exact path="/products/:id"
+            element={
+              <>
+                <ProductIndividual />
+              </>
+            }
+          />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import { ReactComponent as CartIcon } from "../assets/cart.svg";
 import { ReactComponent as Logo } from "../assets/logo.svg";
 import "./NavBar.css";
@@ -7,7 +8,9 @@ function NavBar() {
   return (
     <div className="header">
       <div className="logo-container">
-        <Logo className="logo" />
+        <Link to={'/'}>
+          <Logo className="logo" />
+        </Link>
       </div>
       <div className="options">
         <h3>SHOP</h3>
