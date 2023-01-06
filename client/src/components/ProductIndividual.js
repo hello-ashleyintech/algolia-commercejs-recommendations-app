@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 
 function ProductIndividual() {
   const location = useLocation();
+
   const selectedProduct = location.state?.selectedProduct;
     return (
       <div className="item__container">
