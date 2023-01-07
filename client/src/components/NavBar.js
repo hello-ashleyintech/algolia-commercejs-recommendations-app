@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { ReactComponent as CartIcon } from "../assets/cart.svg";
 import { ReactComponent as Logo } from "../assets/logo.svg";
 import "./NavBar.css";
@@ -8,7 +8,7 @@ function NavBar() {
   return (
     <div className="header">
       <div className="logo-container">
-        <Link to={'/'}>
+        <Link to={"/"}>
           <Logo className="logo" />
         </Link>
       </div>

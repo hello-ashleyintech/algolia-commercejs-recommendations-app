@@ -1,0 +1,11 @@
+.trending__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.trending__container {
+  text-align: center;
+}

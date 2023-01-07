@@ -16,7 +16,8 @@
   padding-top: 100px;
 }
 .item__info {
-  width: max-content;
+  margin: auto;
+  position: 50%;
   text-align: center;
 }
 

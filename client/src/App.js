@@ -6,9 +6,9 @@ import ProductsList from "./components/ProductsList";
 import NavBar from "./components/NavBar";
 import Bot from "./components/ChatBot/Bot";
 import ProductIndividual from "./components/ProductIndividual";
-import aa from 'search-insights';
-import algoliasearch from 'algoliasearch';
-import { InstantSearch, Configure } from 'react-instantsearch-dom';
+import aa from "search-insights";
+import algoliasearch from "algoliasearch";
+import { InstantSearch, Configure } from "react-instantsearch-dom";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -18,12 +18,12 @@ function App() {
     process.env.REACT_APP_ALGOLIA_API_KEY
   );
 
-  aa('init', {
+  aa("init", {
     appId: process.env.REACT_APP_ALGOLIA_APP_ID,
-    apiKey: process.env.REACT_APP_ALGOLIA_API_KEY
+    apiKey: process.env.REACT_APP_ALGOLIA_API_KEY,
   });
 
-  aa('setUserToken', 'user-1');
+  aa("setUserToken", "user-1");
 
   useEffect(() => {
     fetchProducts();
@@ -50,9 +50,10 @@ function App() {
         <NavBar />
         <Routes>
           <Route
-            exact path="/"
+            exact
+            path="/"
             element={
-              <InstantSearch searchClient={searchClient} indexName='products'>
+              <InstantSearch searchClient={searchClient} indexName="products">
                 <Configure clickAnalytics />
                 <ProductsList products={products} />
                 <Bot />
@@ -60,11 +61,13 @@ function App() {
             }
           />
           <Route
-            exact path="/products/:id"
+            exact
+            path="/products/:id"
             element={
-              <InstantSearch searchClient={searchClient} indexName='products'>
+              <InstantSearch searchClient={searchClient} indexName="products">
                 <Configure clickAnalytics />
                 <ProductIndividual />
+                <Bot />
               </InstantSearch>
             }
           />

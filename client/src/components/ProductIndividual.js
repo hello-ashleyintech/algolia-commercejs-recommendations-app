@@ -1,12 +1,14 @@
-import React from 'react';
+import React from "react";
 import "./ProductIndividual.css";
 import { useLocation } from "react-router-dom";
+import Recommendations from "./Recommendations";
 
 function ProductIndividual() {
   const location = useLocation();
 
   const selectedProduct = location.state?.selectedProduct;
-    return (
+  return (
+    <>
       <div className="item__container">
         <img
           className="item__image"
@@ -22,7 +24,9 @@ function ProductIndividual() {
           </div>
         </div>
       </div>
-    );
-  }
-  
+      <Recommendations />
+    </>
+  );
+}
+
 export default ProductIndividual;

@@ -3,21 +3,25 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import ProductItem from "./ProductItem";
 import "./ProductsList.css";
-import aa from 'search-insights';
-import { connectHitInsights } from 'react-instantsearch-dom';
+import aa from "search-insights";
+import { connectHitInsights } from "react-instantsearch-dom";
 
-function Product ({ products }) {
+function Product({ products }) {
   return (
     <div className="products" id="products">
       {products.map((product) => (
-        <Link to={`/products/${product.id}`} state={{ selectedProduct: product }}  onClick={() => {
-          aa('clickedObjectIDs', {
-            userToken: 'user-1',
-            index: 'products',
-            eventName: 'Product clicked on',
-            objectIDs: [product.id],
-          });
-        }}>
+        <Link
+          to={`/products/${product.id}`}
+          state={{ selectedProduct: product }}
+          onClick={() => {
+            aa("convertedObjectIDs", {
+              userToken: "user-1",
+              index: "products",
+              eventName: "Product conversion",
+              objectIDs: [product.id],
+            });
+          }}
+        >
           <ProductItem key={product.id} product={product} />
         </Link>
       ))}
