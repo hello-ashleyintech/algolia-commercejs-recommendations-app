@@ -13,6 +13,7 @@ function Product({ products }) {
         <Link
           to={`/products/${product.id}`}
           state={{ selectedProduct: product }}
+          key={product.id}
           onClick={() => {
             aa("convertedObjectIDs", {
               userToken: "user-1",
@@ -22,7 +23,7 @@ function Product({ products }) {
             });
           }}
         >
-          <ProductItem key={product.id} product={product} />
+          <ProductItem product={product} />
         </Link>
       ))}
     </div>

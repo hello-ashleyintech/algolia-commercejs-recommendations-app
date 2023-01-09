@@ -26,6 +26,7 @@ function Recommendations() {
           <Link
             to={`/products/${product.id}`}
             state={{ selectedProduct: product }}
+            key={product.id}
             onClick={() => {
               aa("convertedObjectIDs", {
                 userToken: "user-1",
@@ -35,7 +36,7 @@ function Recommendations() {
               });
             }}
           >
-            <RecommendationCard key={product.id} product={product} />
+            <RecommendationCard product={product} />
           </Link>
         ))}
       </div>

@@ -23,8 +23,6 @@ function App() {
     apiKey: process.env.REACT_APP_ALGOLIA_API_KEY,
   });
 
-  aa("setUserToken", "user-1");
-
   useEffect(() => {
     fetchProducts();
   }, []);

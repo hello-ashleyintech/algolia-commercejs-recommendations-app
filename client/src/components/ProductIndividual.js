@@ -5,8 +5,8 @@ import Recommendations from "./Recommendations";
 
 function ProductIndividual() {
   const location = useLocation();
-
   const selectedProduct = location.state?.selectedProduct;
+
   return (
     <>
       <div className="item__container">
