@@ -25,7 +25,7 @@ There are two `.env` files in this project. One will be for the Express backend 
 
 Add a `.env` file in each directory and use the `.env.example` files in those directories to determine what environment variables to use.
 
-For the `ALGOLIA_API_KEY` in `server`, use the Admin API Key.
+For the `ALGOLIA_API_KEY` in `server` and the `REACT_APP_ALGOLIA_API_KEY` in `client`, use the Admin API Key.
 
 ### Running the application
 
