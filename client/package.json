@@ -1,5 +1,5 @@
 {
-  "name": "algolia-commercejs-app",
+  "name": "algolia-commercejs-recommendations-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
