@@ -1,4 +1,4 @@
-# Algolia CommerceJS App
+# Algolia CommerceJS App with Recommendations
 
 👋 Welcome to the world of Vinty Luxury Consignment, an online luxury vintage consignment store created with CommerceJS and React with an Express backend.
 
@@ -7,6 +7,9 @@ Here at Vinty, we pride ourselves in not just offering luxury items, but also a 
 The application in this repo will allow you to create a simple e-commerce store with chatbot search functionalities, as seen below:
 
 ![chatbot](https://user-images.githubusercontent.com/12901850/186823255-01cb05fb-bfc3-462c-a76c-3b0bfa269f52.gif)
+
+Additionally, upon successful setup of the app, you'll be able to view user recommendations based on activity:
+![recommend-gif](https://user-images.githubusercontent.com/12901850/212393120-7a7316e4-fd82-49e6-bd7e-54b93e799a89.gif)
 
 ## Getting Started
 
@@ -52,3 +55,7 @@ Now that Chec and `ngrok` are set up, the final step is to swap out your `ngrok`
 ### Add products to CommerceJS store
 
 Now that the webhook is added in, you can now add products to your store. For each product, to align with the app's interface, we recommend entering in a name, description, price, and an image with a generous amount of SEO tags for searchability.
+
+### Recommendations
+
+This app uses [Algolia Recommend](https://www.algolia.com/doc/guides/algolia-recommend/overview/) to generated suggested trending items on individual product detail pages. You will need to set up Algolia Recommend to use that feature of this application - you can learn how to set it up either by following the corresponding article for this project or the guide from official Algolia documentation [here](https://www.algolia.com/doc/guides/algolia-recommend/how-to/set-up/).
